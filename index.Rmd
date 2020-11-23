@@ -1,0 +1,63 @@
+---
+title: "Mass Shootings in the United States (2018)"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include=FALSE}
+source("analysis.R")
+```
+<br>
+
+## Summary
+
+
+##### Over the years and across the U.S., mass shootings have become an all-too-common occurrence. In 2018, there were `r num_shootings` shootings alone. Unfortunately, after the year was over, `r total_lives_lost_all_shootings` people had lost their lives. The city most impacted i.e. the city with the highest combination of deaths and injuries, was `r most_impacted_city`. Additionally, `r city_max_killed_of_shootings` had the shooting where the most lives were lost and the city of `r city_most_injured_of_shootings` had the shooting with the most injuries.
+
+<br>
+
+## Table of Summary Info
+```{r, echo = FALSE, results = 'asis'}
+library(kableExtra)
+table
+```
+
+<br>
+
+## Specific Incident
+>On `r worst_date`, one of the worst shootings of that year occurred in `r worst_state`. At 2:21 pm EST, gunshots could be heard ringing throughout the halls of Stoneman Douglas High School. At the address of `r worst_address`, `r worst_deaths` people were killed and `r worst_shooting_injuries` people were injured. After the incident began to unfold and became public, parents rushed to the school only to find it surrounded by police blocking all access to inside the building. This shooting was dubbed [The Parkland Shooting](https://www.cnn.com/2018/02/14/us/florida-high-school-shooting/index.html) and developed into a day the city of `r worst_city` would never forget.<br>
+<br>
+More information on the Parkland Shooting can be found at:
+https://www.cnn.com/2018/02/14/us/florida-high-school-shooting/index.html
+
+<br>
+
+## Map
+
+<br>
+`r map`
+
+Other information about the shootings which took place in 2018 can be found on this map. Visualizing this data is crucial to understanding where the most shootings occur and, in turn, to determine the level of required intervention.
+<br>
+In this map, we can see the majority of shootings occur in the mid-west to eastern U.S. regions. Additionally, most of the largest shootings took place in municipalities. 
+<br>
+
+
+
+
+</br>
+
+## Graphic Visual
+
+
+Reviewing the 2018 shooting data also helps to answer the question "Which months had the most shootings". The following plot was chosen to answer this question as it succinctly compares the number of shootings to the month. Additionally, each bar is filled with a shade of blue that is conditional upon the value of the bar. Not only does this separate one bar from the rest, but is an alternative way to compare each value.
+
+
+`r run_plot`
+
+
+The graphic above tells us that there was an increase in shootings during the summer months of June and July. Interestingly, there were also fewer shootings during December, the month most often associated with mental distress.
+
